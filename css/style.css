@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+ul {
+    list-style-type: none;
+}
+
+.flex-container {
+    display: flex;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.round-thumbnail img{
+    border-radius: 50%;
+    object-fit: cover;
+    height: 200px;
+}
+
+button {
+    padding: .5rem 3rem;
+    background-color: #666;
+    color: #fff;
+    font-size: .87rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}

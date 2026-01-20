@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,39 +9,45 @@
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <h1>ハリネズミカフェのメンバー</h1>
-    
+
     <ul class="flex-container">
         <li>
-            <ul>
-                <li class="round-thumbnail"><img src="./img/hari1.jpg" alt=""></li>
-                <li><button data-index="0">詳しい紹介</button></li>
-            </ul>
+            <div class="round-thumbnail"><img src="./img/hari1.jpg" alt=""></div>
+            <button data-index="0">詳しい紹介</button>
         </li>
         <li>
-            <ul>
-                <li class="round-thumbnail"><img src="./img/hari2.jpg" alt=""></li>
-                <li><button data-index="1">詳しい紹介</button></li>
-            </ul>
+            <div class="round-thumbnail"><img src="./img/hari2.jpg" alt=""></div>
+            <button data-index="1">詳しい紹介</button>
         </li>
         <li>
-            <ul>
-                <li class="round-thumbnail"><img src="./img/hari3.jpg" alt=""></li>
-                <li><button data-index="2">詳しい紹介</button></li>
-            </ul>
-        </li>    </ul>
+            <div class="round-thumbnail"><img src="./img/hari3.jpg" alt=""></div>
+            <button data-index="2">詳しい紹介</button>
+        </li>
+    </ul>
 
-        <dialog id="detail-modal">
-            <ul>
-                <li><img id="modal-image" src="" alt=""></li>
-                <li>名前：<span id="modal-name"></span></li>
-                <li>性格：<span id="modal-type"></span></li>
-                <li>好きな食べ物：<span id="modal-like"></span></li>
-                <li><button id="close-modal-btn">閉じる</button></li>
-            </ul>
-        </dialog>
+    <dialog id="detail-modal">
+        <div class="modal-image"><img id="modal-image" src="" alt=""></div>
+        <dl class="modal-info">
+            <div class="modal-info-item">
+                <dt>名前</dt>
+                <dd id="modal-name"></dd>
+            </div>
+            <div class="modal-info-item">
+                <dt>性格</dt>
+                <dd id="modal-type"></dd>
+            </div>
+            <div class="modal-info-item">
+                <dt>好きな食べ物</dt>
+                <dd id="modal-like"></dd>
+            </div>
+        </dl>
+        <button id="close-modal-btn">閉じる</button>
+    </dialog>
 
     <script src="./js/script.js"></script>
 </body>
+
 </html>

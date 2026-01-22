@@ -7,7 +7,8 @@ const member = [
 
 // 今クリックしたリストを呼び出すところ
 function listModal(list = member) {
-    const listEl = document.getElementById("list-modal");
+    const listEl = document.getElementById("listModal");
+    console.log(listEl);
     listEl.innerHTML = '';
 
     list.forEach((mem, index) => {
@@ -30,10 +31,13 @@ openBtns.forEach(btn => {
         const index = e.currentTarget.dataset.index;
         const data = member[index];
 
-        document.getElementById("modal-image").src = data.image;
-        document.getElementById("modal-name").textContent = data.name;
-        document.getElementById("modal-type").textContent = data.type;
-        data.like.forEach(item => document.getElementById("modal-like").textContent += `「${item}」`);
+        document.getElementById("modalImage").src = data.image;
+        document.getElementById("modalName").textContent = data.name;
+        document.getElementById("modalType").textContent = data.type;
+        
+        const likeEl = document.getElementById("modalLike");
+        likeEl.textContent = "";
+        data.like.forEach(item => likeEl.textContent += `「${item}」`);
         dialog.showModal();
     });
 });

@@ -6,12 +6,11 @@ const member = [
 ];
 
 // 今クリックしたリストを呼び出すところ
-function listModal(list = member) {
     const listEl = document.getElementById("listModal");
     console.log(listEl);
     listEl.innerHTML = '';
 
-    list.forEach((mem, index) => {
+    member.forEach((mem, index) => {
         const li = document.createElement("li");
         li.innerHTML = `
             <div class="round-thumbnail"><img src="${mem.image}" alt="${mem.name}"></div>
@@ -19,9 +18,6 @@ function listModal(list = member) {
         `;
         listEl.appendChild(li);
     });
-}
-
-listModal();
 
 // 開いたとき
 // ボタンを取得してイベントの発火したボタンの詳細を呼び出す

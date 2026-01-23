@@ -1,8 +1,8 @@
 // メンバーリスト
 const member = [
-    { image: "./img/hari1.jpg", name: "ラテ", type: "活発で人懐っこい", like: ["とうもろこし", "ゆでたまご"] },
-    { image: "./img/hari2.jpg", name: "ミルク", type: "とっても賢い", like: ["小松菜", "コオロギ"] },
-    { image: "./img/hari3.jpg", name: "チャイ", type: "ちょっと怖がり", like: ["かぼちゃ", "りんご"] }
+    { image: "hari1.jpg", name: "ラテ", type: "活発で人懐っこい", like: ["とうもろこし", "ゆでたまご"] },
+    { image: "hari2.jpg", name: "ミルク", type: "とっても賢い", like: ["小松菜", "コオロギ"] },
+    { image: "hari3.jpg", name: "チャイ", type: "ちょっと怖がり", like: ["かぼちゃ", "りんご"] }
 ];
 
 // 今クリックしたリストを呼び出すところ
@@ -14,7 +14,7 @@ function listModal(list = member) {
     list.forEach((mem, index) => {
         const li = document.createElement("li");
         li.innerHTML = `
-            <div class="round-thumbnail"><img src="${mem.image}" alt="${mem.name}"></div>
+            <div class="round-thumbnail"><img src="./img/${mem.image}" alt="${mem.name}"></div>
             <button data-index="${[index]}" class="open-modal-btn">詳しい紹介</button>
         `;
         listEl.appendChild(li);
@@ -31,9 +31,10 @@ openBtns.forEach(btn => {
         const index = e.currentTarget.dataset.index;
         const data = member[index];
 
-        document.getElementById("modalImage").src = data.image;
+        document.getElementById("modalImage").src = `./img/${data.image}`;
         document.getElementById("modalName").textContent = data.name;
         document.getElementById("modalType").textContent = data.type;
+
 
         let likeContents = '';
         data.like.forEach(item => likeContents += `「${item}」`);

@@ -35,9 +35,10 @@ openBtns.forEach(btn => {
         document.getElementById("modalName").textContent = data.name;
         document.getElementById("modalType").textContent = data.type;
 
-        const likeEl = document.getElementById("modalLike");
-        likeEl.textContent = "";
-        data.like.forEach(item => likeEl.textContent += `「${item}」`);
+
+        let likeContents = '';
+        data.like.forEach(item => likeContents += `「${item}」`);
+        document.getElementById("modalLike").textContent = likeContents;
         dialog.showModal();
     });
 });

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal ハリネズミカフェのメンバー</title>
+    <!-- reset.css ress -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <h1>ハリネズミカフェのメンバー</h1>
+
+    <ul class="flex-container" id="listModal">
+        <!-- 
+        <li>
+            <div class="round-thumbnail"><img src="./img/hari1.jpg" alt=""></div>
+            <button data-index="0">詳しい紹介</button>
+        </li>
+        <li>
+            <div class="round-thumbnail"><img src="./img/hari2.jpg" alt=""></div>
+            <button data-index="1">詳しい紹介</button>
+        </li>
+        <li>
+            <div class="round-thumbnail"><img src="./img/hari3.jpg" alt=""></div>
+            <button data-index="2">詳しい紹介</button>
+        </li> -->
+    </ul>
+
+    <dialog id="detailModal" class="detail-modal">
+        <div class="modal-image"><img id="modalImage" src="" alt=""></div>
+        <dl class="modal-info">
+            <div class="modal-info-item">
+                <dt>名前</dt>
+                <dd id="modalName"></dd>
+            </div>
+            <div class="modal-info-item">
+                <dt>性格</dt>
+                <dd id="modalType"></dd>
+            </div>
+            <div class="modal-info-item">
+                <dt>好きな食べ物</dt>
+                <dd id="modalLike"></dd>
+            </div>
+        </dl>
+        <button id="close-modal-btn" class="close-modal-btn">閉じる</button>
+    </dialog>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
